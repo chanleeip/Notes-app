@@ -14,7 +14,7 @@ export default Header
 const styles = StyleSheet.create({
     head:{
         width:"100%",
-        marginTop:40,
+        marginTop:42,
         backgroundColor:"black",
         height:80,
        alignItems:"center",
