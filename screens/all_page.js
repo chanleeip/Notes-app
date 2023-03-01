@@ -14,11 +14,8 @@ const All_page   = ({navigation}) => {
             <View style={styles.button}>
                 <Text style={styles.heading}>All pages</Text>
                     </View>
-        <Pressable onPress={onnpress}>
             <View style={styles.button}>
-                <Icon style={styles.icon} name="arrow-reverse"/>
                     </View>
-        </Pressable>
             </View>
     )
 }

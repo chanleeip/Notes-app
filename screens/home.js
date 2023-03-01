@@ -4,7 +4,7 @@ import Icon from 'react-native-vector-icons/Ionicons'
 
 const Home   = ({navigation}) => {
     const onnpress=() => {
-        navigation.navigate("add_page");
+        navigation.navigate("all-page");
     }
     return (
         <View style={styles.container}>
@@ -14,7 +14,7 @@ const Home   = ({navigation}) => {
                     <Icon style={styles.icon} name="add-outline"/>
                 </View>
             </Pressable>
-            <Pressable onPress={onnpress}>
+            <Pressable onPress={()=>navigation.push("add_page")}>
                 <View style={styles.button}>
                     <Text style={styles.heading}>Add Page</Text>
                     <Icon style={styles.icon} name="arrow-forward"/>
