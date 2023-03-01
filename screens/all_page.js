@@ -9,18 +9,18 @@ const add_page   = ({navigation}) => {
     return (
         <View style={styles.container}>
             <Pressable  onPress={onnpress}>
-                <View style={styles.button}>
-                    <Text style={styles.heading}>All pages</Text>
-                    <Icon style={styles.icon} name="add-outline"/>
-                </View>
+            <View style={styles.button}>
+                <Text style={styles.heading}>All pages</Text>
+                <Icon style={styles.icon} name="add-outline"/>
+                    </View>
             </Pressable>
-            <Pressable onPress={onnpress}>
-                <View style={styles.button}>
-                    <Text style={styles.heading}>Add Page</Text>
-                    <Icon style={styles.icon} name="arrow-forward"/>
-                </View>
-            </Pressable>
-        </View>
+        <Pressable>
+            <View style={styles.button}>
+                        <Text style={styles.heading}>Add Page</Text>
+                <Icon style={styles.icon} name="arrow-forward"/>
+                    </View>
+        </Pressable>
+            </View>
     )
 }
 
@@ -35,7 +35,7 @@ const styles = StyleSheet.create({
         marginBottom:130
     },
     button:{
-        width:Dimensions.get("window").width-100,
+      width:Dimensions.get("window").width-100,
         backgroundColor:"#f5f5f5",
         justifyContent:"center",
         alignItems:"center",

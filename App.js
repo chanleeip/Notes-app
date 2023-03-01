@@ -1,20 +1,20 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
 import Header from "./components/Header";
-import Add_page from "./screens/add_page";
-
+import  Add_page from "./screens/add_page";
+import All_notes from "./screens/all_page"
+import Home from "./screens/home"
+import {NavigationContainer} from '@react-navigation/native';
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+const stack=createNativeStackNavigator();
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Header />
-        <Add_page />
-      <StatusBar style="auto" />
-    </View>
-  );
-}
+      <NavigationContainer>
+          <Header />
+          <stack.Navigator>
+            <stack.Screen name="home" component={Home} />
+              <stack.Screen name="add_page" component={Add_page} />
+              <stack.Screen name="all-page" component={All_notes} />
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-});
+          </stack.Navigator>
+      </NavigationContainer>
+);
+}

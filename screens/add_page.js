@@ -2,22 +2,33 @@ import {Dimensions, StyleSheet, Text, View,Pressable} from 'react-native'
 import React from 'react'
 import Icon from 'react-native-vector-icons/Ionicons'
 
-const add_page   = () => {
+const add_page   = ({navigation}) => {
+    const oknpress=()=>{
+        if(navigation=='home')
+        navigation.navigate('home');
+        else
+            navigation.goBack();
+    }
     return (
         <View style={styles.container}>
-            <Pressable>
-            <View style={styles.button}>
-                <Text style={styles.heading}>All pages</Text>
-                <Icon style={styles.icon} name="add-outline"/>
-                    </View>
+            <Pressable  onPress={oknpress}>
+                <View style={styles.button}>
+                    <Text style={styles.heading}>All pages</Text>
+                    <Icon style={styles.icon} name="add-outline"/>
+                </View>
             </Pressable>
-        <Pressable>
-            <View style={styles.button}>
-                        <Text style={styles.heading}>Add Page</Text>
-                <Icon style={styles.icon} name="arrow-forward"/>
-                    </View>
-        </Pressable>
-            </View>
+            <Pressable>
+                <View style={styles.button}>
+                    <Text style={styles.heading}>Add Page</Text>
+                    <Icon style={styles.icon} name="arrow-forward"/>
+                </View>
+            </Pressable>
+            <Pressable onPress={oknpress}>
+                <View>
+                    <Text> Go back</Text>
+                </View>
+            </Pressable>
+        </View>
     )
 }
 
@@ -32,7 +43,7 @@ const styles = StyleSheet.create({
         marginBottom:130
     },
     button:{
-      width:Dimensions.get("window").width-100,
+        width:Dimensions.get("window").width-100,
         backgroundColor:"#f5f5f5",
         justifyContent:"center",
         alignItems:"center",
