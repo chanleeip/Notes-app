@@ -2,7 +2,7 @@ import {Dimensions, StyleSheet, Text, View,Pressable} from 'react-native'
 import React from 'react'
 import Icon from 'react-native-vector-icons/Ionicons'
 
-const add_page   = ({navigation}) => {
+const Home   = ({navigation}) => {
     const onnpress=() => {
         navigation.navigate("add_page");
     }
@@ -24,7 +24,7 @@ const add_page   = ({navigation}) => {
     )
 }
 
-export default add_page
+export default Home
 
 const styles = StyleSheet.create({
     container:{

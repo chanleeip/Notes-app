@@ -10,9 +10,9 @@ export default function App() {
       <NavigationContainer>
           <Header />
           <stack.Navigator>
-            <stack.Screen name="home" component={Home} />
-              <stack.Screen name="add_page" component={Add_page} />
-              <stack.Screen name="all-page" component={All_notes} />
+            <stack.Screen name="home" component={Home} options={{ headerShown: false }}/>
+              <stack.Screen name="add_page" component={Add_page} options={{ headerShown: false }}/>
+              <stack.Screen name="all-page" component={All_notes} options={{ headerShown: false }} />
 
           </stack.Navigator>
       </NavigationContainer>

@@ -2,29 +2,28 @@ import {Dimensions, StyleSheet, Text, View,Pressable} from 'react-native'
 import React from 'react'
 import Icon from 'react-native-vector-icons/Ionicons'
 
-const add_page   = ({navigation}) => {
+const All_page   = ({navigation}) => {
     const onnpress=() => {
-        navigation.navigate("add_page");
+        if(navigation=='home')
+        navigation.navigate("home");
+        else
+        navigation.goBack();
     }
     return (
         <View style={styles.container}>
-            <Pressable  onPress={onnpress}>
             <View style={styles.button}>
                 <Text style={styles.heading}>All pages</Text>
-                <Icon style={styles.icon} name="add-outline"/>
                     </View>
-            </Pressable>
-        <Pressable>
+        <Pressable onPress={onnpress}>
             <View style={styles.button}>
-                        <Text style={styles.heading}>Add Page</Text>
-                <Icon style={styles.icon} name="arrow-forward"/>
+                <Icon style={styles.icon} name="arrow-reverse"/>
                     </View>
         </Pressable>
             </View>
     )
 }
 
-export default add_page
+export default All_page
 
 const styles = StyleSheet.create({
     container:{

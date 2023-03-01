@@ -1,8 +1,8 @@
-import {Dimensions, StyleSheet, Text, View,Pressable} from 'react-native'
+import {Dimensions, StyleSheet, Text, View, Pressable, TextInput} from 'react-native'
 import React from 'react'
 import Icon from 'react-native-vector-icons/Ionicons'
 
-const add_page   = ({navigation}) => {
+const Add_page   = ({navigation}) => {
     const oknpress=()=>{
         if(navigation=='home')
         navigation.navigate('home');
@@ -11,35 +11,34 @@ const add_page   = ({navigation}) => {
     }
     return (
         <View style={styles.container}>
-            <Pressable  onPress={oknpress}>
                 <View style={styles.button}>
-                    <Text style={styles.heading}>All pages</Text>
-                    <Icon style={styles.icon} name="add-outline"/>
+                    <Text style={{fontSize:"30%",marginTop:"-70%"}}>Write the Note</Text>
+                    </View>
+            <View>
+                    <TextInput style={styles.input}/>
                 </View>
-            </Pressable>
-            <Pressable>
-                <View style={styles.button}>
-                    <Text style={styles.heading}>Add Page</Text>
-                    <Icon style={styles.icon} name="arrow-forward"/>
+            <Pressable onPress={oknpress}>
+                <View>
+                    <Icon style={{fontSize:"80%"}} name="add"/>
                 </View>
             </Pressable>
             <Pressable onPress={oknpress}>
                 <View>
-                    <Text> Go back</Text>
+                    <Text style={styles.heading_1}> Go back</Text>
                 </View>
             </Pressable>
         </View>
     )
 }
 
-export default add_page
+export default Add_page
 
 const styles = StyleSheet.create({
     container:{
         flex:1,
         alignItems:"center",
         justifyContent:"space-evenly",
-        marginTop:40,
+        marginTop:20,
         marginBottom:130
     },
     button:{
@@ -56,6 +55,14 @@ const styles = StyleSheet.create({
     },
     heading:{
         fontSize:"50%"
+    },
+    heading_1:{
+        backgroundColor:"red",
+        fontSize:"30%"
+},
+    input:{
+    backgroundColor:"pink",
+        width:"80%"
     }
 
 })
